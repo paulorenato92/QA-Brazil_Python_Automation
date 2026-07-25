@@ -1,5 +1,5 @@
 #URL DO URBAN ROUTES
-URBAN_ROUTES_URL = 'https://cnt-7f3b4d19-a185-4927-946d-3cda8f7c0aba.containerhub.tripleten-services.com?lng=pt'
+URBAN_ROUTES_URL = 'https://cnt-bab52dc8-dffe-485c-bf55-68520232e836.containerhub.tripleten-services.com?lng=pt'
 
 # CONSTANTE DE USO NO TESTE
 ADDRESS_FROM = 'East 2nd Street, 601'
