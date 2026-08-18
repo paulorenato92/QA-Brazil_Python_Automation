@@ -1,4 +1,4 @@
-port helpers
+import helpers
 import data
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -76,8 +76,8 @@ class TestUrbanRoutes:
     def test_driver_info_appears(self):
         self.page.wait_driver_info()
         name, rating, image = self.page.get_driver_info()
-        assert name is not None and name != ""
-        assert rating is not None
+        assert name 
+        assert rating 
         assert image
 
     @classmethod
