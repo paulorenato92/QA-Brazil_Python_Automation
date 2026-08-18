@@ -43,7 +43,7 @@ def assert_route(self, from_field, to_field):
     assert self.get_to_field() == to_field
 
 def click_taxi_button(self):
-    self.drive.find_element(self.TAXI_BUTTON).click()
+    self.driver.find_element(*self.TAXI_BUTTON).click()
 
 def click_comfort_plan_card(self):
     self.driver.find_element(self.CARD_COMFORT_PLAN).click()
@@ -53,15 +53,15 @@ def select_comfort_plan(self):
     self.click_comfort_plan_card()
 
 def assert_comfort_plan_selected(self):
-    assert self.drive.find.element(self, SELECTED_COMFORT_PLAN).text == 'Comfort'
+    assert self.driver.find_element(*self.SELECTED_COMFORT_PLAN).text == 'Comfort'
 
 def set_phone(self, phone_number):
     self.driver.find_element(self.PHONE_NUMBER_CONTROL).click()
     self.driver.find_element(self.PHONE_NUMBER_INPUT).send_keys(phone_number)
     self.driver.find_element(self.PHONE_NUMBER_NEXT_BUTTON).click()
-    code = helpers.retrieve_phone_code(self)
+    helpers.retrieve_phone_code(self.driver)
     self.driver.find_element(self.PHONE_NUMBER_CODE_INPUT).send_keys(code)
-    self.driver.find_element(self.PHONER_NUMBER_CONFIRM_BUTTON).click()
+    self.driver.find_element(self.PHONE_NUMBER_CONFIRM_BUTTON).click()
 
 def assert_phone_number(self, phone_number):
     assert self.driver.find_elements(self.PHONE_NUMBER).get_property('value') == phone_number
